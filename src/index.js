@@ -67,9 +67,7 @@ const microApi = routes => {
         reqBody = {}
       }
 
-      const resBody = await route.handler({
-        res,
-        req,
+      const resBody = await route.handler(req, res, {
         body: reqBody,
         params: route.params,
         headers: req.headers
